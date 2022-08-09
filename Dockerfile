@@ -20,5 +20,8 @@ RUN find /usr/local/aws-cli/v2/current/dist/awscli/botocore/data -name examples-
 
 # build the final image
 FROM registry.gitlab.com/gitlab-org/terraform-images/branches/v0-41-0-1.2:396db5b5b4341d2b7820c0f39246890b08888a3b
+
+LABEL org.opencontainers.image.source https://github.com/Container-Driven-Development/gitlab-terraform-aws-cli-v2
+
 COPY --from=builder /usr/local/aws-cli/ /usr/local/aws-cli/
 COPY --from=builder /aws-cli-bin/ /usr/local/bin/
