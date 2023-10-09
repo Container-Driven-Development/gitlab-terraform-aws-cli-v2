@@ -19,7 +19,7 @@ RUN rm -rf /usr/local/aws-cli/v2/current/dist/aws_completer /usr/local/aws-cli/v
 RUN find /usr/local/aws-cli/v2/current/dist/awscli/botocore/data -name examples-1.json -delete
 
 # build the final image
-FROM registry.gitlab.com/gitlab-org/terraform-images/branches/v1-5-1-1.1:e47f0edb9682391f367e07d79dd2e9cf2f8223bb
+FROM registry.gitlab.com/gitlab-org/terraform-images/branches/v1-6-0-1.5:f158d31c1356d14029d8285ddd4b79ebbe6d7e90
 
 LABEL org.opencontainers.image.source https://github.com/Container-Driven-Development/gitlab-terraform-aws-cli-v2
 
