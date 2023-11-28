@@ -23,5 +23,7 @@ FROM registry.gitlab.com/gitlab-org/terraform-images/branches/v1-6-0-1.5:f158d31
 
 LABEL org.opencontainers.image.source https://github.com/Container-Driven-Development/gitlab-terraform-aws-cli-v2
 
+COPY --from=grafana/mimirtool:2.10.4 /bin/mimirtool /usr/local/bin/mimirtool
+
 COPY --from=builder /usr/local/aws-cli/ /usr/local/aws-cli/
 COPY --from=builder /aws-cli-bin/ /usr/local/bin/
